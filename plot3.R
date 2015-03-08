@@ -1,0 +1,6 @@
+plot(power_volts$date, power_volts$sub_metering_1, "l", col="black", ylab="Energy sub metering", xlab="", cex.lab=.9, cex.axis=.8, cex=1)
+lines(power_volts$date, power_volts$sub_metering_2, "l", col="red")
+lines(power_volts$date, power_volts$sub_metering_3, "l", col="blue")
+legend("topright", c("sub_metering_1", "sub_metering_2", "sub_metering_3"), lwd=c(2,2,2), col= c("black", "red", "blue"), cex=.8, title.adj=0)
+dev.copy(png, file= "Plot 3.png")
+dev.off()
